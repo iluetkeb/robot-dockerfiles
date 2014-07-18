@@ -1,6 +1,5 @@
 FROM ubuntu:12.04
 MAINTAINER Ingo Lütkebohle <ingo.luetkebohle@ipvs.uni-stuttgart.de>
-RUN apt-get -y install wget
 RUN echo "deb http://packages.ros.org/ros/ubuntu precise main" > /etc/apt/sources.list.d/ros-latest.list
 ADD http://packages.ros.org/ros.key ros.key
 RUN apt-key add ros.key
