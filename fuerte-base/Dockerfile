@@ -1,4 +1,4 @@
-FROM ubuntu:12.04
+FROM ingo/ubuntu-de:12.04
 MAINTAINER Ingo Lütkebohle <ingo.luetkebohle@ipvs.uni-stuttgart.de>
 
 # turn of debconf questions, they do not work in "docker build" anyway.
@@ -14,7 +14,7 @@ RUN add-apt-repository "deb http://de.archive.ubuntu.com/ubuntu/ precise-updates
 RUN add-apt-repository "deb http://de.archive.ubuntu.com/ubuntu/ precise-security multiverse"
 
 # add ros repository
-RUN echo "deb http://packages.ros.org/ros/ubuntu precise main" > /etc/apt/sources.list.d/ros-latest.list
+RUN echo "deb http://ros.informatik.uni-freiburg.de/packages/ros/ubuntu precise main" > /etc/apt/sources.list.d/ros-latest.list
 ADD http://packages.ros.org/ros.key ros.key
 RUN apt-key add ros.key
 RUN apt-get update
