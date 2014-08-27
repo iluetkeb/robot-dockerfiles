@@ -17,5 +17,5 @@ RUN apt-get -y install `apt-get install -s ros-fuerte-ros ros-fuerte-pr2-apps ro
 RUN apt-get -y install python-rosdep python-rosdistro python-rosinstall python-rosinstall-generator python-rospkg python-wstool python-vcstools python-catkin-pkg
 
 # often used for actually running and displaying stuff, so might as well include it here
-RUN apt-get -y install sudo x11vnc fluxbox
+RUN apt-get -y install sudo x11vnc fluxbox xvfb
 
